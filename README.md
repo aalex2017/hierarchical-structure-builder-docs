@@ -6,6 +6,14 @@ It is suitable for product catalogs, organizational charts, document trees, cate
 
 ---
 
+## Purchase
+
+The complete package, including source files, examples, and documentation, is available on Gumroad.
+
+👉 https://alexeeff.gumroad.com/l/nhkcmc
+
+---
+
 ## 🚀 Features
 
 - Visual builder for hierarchical data structures
