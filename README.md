@@ -7,11 +7,11 @@ It is suitable for product catalogs, organizational charts, document trees, cate
 ---
 ## Preview
 
-!(main.png)
-!(1.png)
-!(2.png)
-!(3.png)
-!(4.png)
+![](main.png)
+![](1.png)
+![](2.png)
+![](3.png)
+![](4.png)
 
 ---
 
