@@ -79,11 +79,11 @@ Graph
 
 Displays an existing hierarchy.
 
-The backend should generate HTML similar to:
+The backend should generate HTML similar to (creates a flat list of elements inside "graph graph--profile" element):
 
 ```php
 <div class="graph graph--profile">
-
+	
     <div class="graph__vertex"
         data-parent=""
         data-id="15"
@@ -91,24 +91,36 @@ The backend should generate HTML similar to:
         data-node-type="leaf">
     </div>
 
+	<div class="graph__vertex"
+       ...
+    </div>
+	
+	...
+	
 </div>
 ```
 
 CreateGraph
 
-Allows users to build or edit a hierarchy.
+Allows users to build a hierarchy.
 
-The backend should generate HTML similar to:
+The backend should generate HTML similar to (similar to Graph, but the list is created from the post or get array):
 
 ```php
 <div class="graph graph--create">
-
+	
     <div class="graph__vertex"
         data-parent=""
         data-id=""
         data-number=""
         data-sorting="">
     </div>
+
+	<div class="graph__vertex"
+       ...
+    </div>
+	
+	...
 
 </div>
 ```
@@ -140,11 +152,12 @@ leaf		Final node. Cannot contain children.
 error		The referenced entity does not exist in the database.
 
 Examples of leaf:
-
+```text
 product inside a category
 employee in a department
 file inside a folder
 book owned by an author
+```
 
 ---
 
@@ -393,6 +406,51 @@ const createGraph = new CreateGraph(element, options);
 A complete configuration example:
 
 ```javascript
+document.addEventListener('DOMContentLoaded', () => {
+    const graphElements = document.querySelectorAll('.graph');
+    
+    graphElements.forEach(graphElement => {
+        if (graphElement.classList.contains('graph--profile')) {
+            const options = {
+                publicMode: true               ,
+                showConnections: true           ,
+                ignoreSorting: false            ,
+                ignoreRootSorting: false        ,
+                setLineDash: [5, 5]             ,
+                lineWidth: 1                    ,
+                strokeStyle: '#2be22b'        ,
+                arcRadius: 10                   ,
+                contentClickCallback
+           
+            };
+            
+            const graph = new Graph(graphElement, options);
+            
+        } else if (graphElement.classList.contains('graph--create')) {
+            const options = {
+                nestingDepth: 10                ,
+                defaultSorting: 'alphabet'      ,
+                defaultRootSorting: 'number'    ,
+                showConnections: true           ,
+                ignoreSorting: false            ,
+                ignoreRootSorting: false        ,
+                scrollAreaWidth: 50             ,
+                scrollAreaHeight: 50            ,
+                scrollSpeedWidth: 20            ,
+                scrollSpeedHeight: 20           ,
+                setLineDash: [5, 2]             ,
+                lineWidth: 1                    ,
+                strokeStyle: 'black'            ,
+                arcRadius: 10                   ,
+                validateVertexCallback          ,
+                onValidateResult
+            };
+            
+            const graph = new CreateGraph(graphElement, options);
+            
+        }
+    });
+});
 ...
 ```
 
