@@ -257,7 +257,7 @@ Graph.startRendering();
 
 ## 📚 Public API
 
-Every graph instance exposes the following public properties and methods.
+Every CreateGraph instance exposes the following public properties and methods. Graph profile instance exposes only `element`.
 
 ### Properties
 
