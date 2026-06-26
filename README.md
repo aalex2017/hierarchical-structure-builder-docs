@@ -178,12 +178,14 @@ number[]
 
 ## ⚠ Requirements
 
+```text
 data-id is required.
 Root vertices must use data-parent="".
 One hierarchy must exist inside one `<form>`.
 Multiple forms cannot be used for the same hierarchy.
 Sorting must always be performed on the server.
 The library prevents cyclic relations (A → B, B → A) and (A → B → A). Cyclic relations (A → B → A) when constructing an existing graph must be prevented in the database query.
+```
 
 ---
 
@@ -323,6 +325,8 @@ Add a custom `graph__content` element inside every vertex.
 		
     </div>
 
+	...
+	
 </div>
 ```
 
@@ -372,6 +376,8 @@ Example:
 		
     </div>
 
+	...
+	
 </div>
 ```
 
