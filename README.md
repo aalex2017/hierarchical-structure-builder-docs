@@ -412,13 +412,13 @@ document.addEventListener('DOMContentLoaded', () => {
     graphElements.forEach(graphElement => {
         if (graphElement.classList.contains('graph--profile')) {
             const options = {
-                publicMode: true               ,
+                publicMode: true               	,
                 showConnections: true           ,
                 ignoreSorting: false            ,
                 ignoreRootSorting: false        ,
                 setLineDash: [5, 5]             ,
                 lineWidth: 1                    ,
-                strokeStyle: '#2be22b'        ,
+                strokeStyle: '#2be22b'        	,
                 arcRadius: 10                   ,
                 contentClickCallback
            
