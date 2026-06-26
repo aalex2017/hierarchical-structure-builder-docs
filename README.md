@@ -196,7 +196,7 @@ The default blue highlighting shown while editing is not an error.
 
 It simply indicates that identical node IDs currently contain different data.
 
-After editing, the nodes become synchronized automatically.
+After submitting, the nodes become synchronized automatically.
 
 ---
 
@@ -206,7 +206,7 @@ If the page is reloaded after a failed database insertion, the graph is rebuilt 
 
 If identical nodes exist in multiple places within the hierarchy, duplicate database inserts may occur.
 
-It is recommended to ignore duplicate-key errors during insertion.
+It is required to ignore duplicate-key errors during insertion.
 
 Example:
 
