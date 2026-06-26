@@ -120,13 +120,14 @@ During the initial page load the library automatically creates all required cont
 ## 📌 Data Attributes
 
 graph__vertex
-Attribute			| Required			| Description 													|
+
+|Attribute			| Required			| Description 													|
 |-------------------|-------------------|---------------------------------------------------------------|
-data-id				| ✅				| Unique vertex identifier. 									|
-data-parent			| ✅				| Parent identifier. Root vertices use an empty string (""). 	|
-data-sorting		| optional			| Sorting method (number or alphabet). 							|
-data-number			| CreateGraph only	| Display order. 												|
-data-node-type		| Profile only		| Vertex state. 												|
+|data-id			| ✅				| Unique vertex identifier. 									|
+|data-parent		| ✅				| Parent identifier. Root vertices use an empty string (""). 	|
+|data-sorting		| optional			| Sorting method (number or alphabet). 							|
+|data-number		| CreateGraph only	| Display order. 												|
+|data-node-type		| Profile only		| Vertex state. 												|
 
 ---
 
