@@ -5,6 +5,11 @@ A lightweight JavaScript library for creating, previewing, and validating hierar
 It is suitable for product catalogs, organizational charts, document trees, category systems, and other nested data structures.
 
 ---
+## Preview
+
+![Create mode](main.png)
+
+---
 
 ## Purchase
 
