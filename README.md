@@ -303,6 +303,7 @@ Add a custom root sorting element with the class `graph__sorting` directly insid
     </span>
 
     ...
+	
 </div>
 ```
 
