@@ -152,6 +152,7 @@ leaf		Final node. Cannot contain children.
 error		The referenced entity does not exist in the database.
 
 Examples of leaf:
+
 ```text
 product inside a category
 employee in a department
