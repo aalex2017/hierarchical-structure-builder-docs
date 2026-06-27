@@ -107,7 +107,7 @@ Allows users to build a hierarchy.
 The backend should generate HTML similar to (similar to Graph, but the list is created from the post or get array):
 
 ```php
-<div class="graph graph--create">
+<div class="graph graph--create" data-root-sorting="">
 	
     <div class="graph__vertex"
         data-parent=""
