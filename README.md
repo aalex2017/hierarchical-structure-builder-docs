@@ -4,6 +4,14 @@ A lightweight JavaScript library for creating, previewing, and validating hierar
 
 It is suitable for product catalogs, organizational charts, document trees, category systems, and other nested data structures.
 
+## Community Edition
+
+This repository contains the read-only Graph component for displaying hierarchical structures.
+
+Need a visual editor with drag & drop, validation and AJAX callbacks?
+The full version is available on Gumroad.
+👉 https://alexeeff.gumroad.com/l/nhkcmc
+
 ---
 ## Preview
 
@@ -12,15 +20,6 @@ It is suitable for product catalogs, organizational charts, document trees, cate
 ![](2.png)
 ![](3.png)
 ![](4.png)
-
----
-
-## Purchase
- 
-Need to create hierarchies?
-The full version including CreateGraph is available on Gumroad. It includes source files, examples, and documentation.
-
-👉 https://alexeeff.gumroad.com/l/nhkcmc
 
 ---
 
