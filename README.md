@@ -298,6 +298,7 @@ Add a custom root sorting element with the class `graph__sorting` directly insid
 
 ```html
 <div class="graph graph--profile">
+	
     <span class="graph__sorting">
         ...
     </span>
