@@ -10,6 +10,7 @@ This repository contains the read-only Graph component for displaying hierarchic
 
 Need a visual editor with drag & drop, validation and AJAX callbacks?
 The full version is available on Gumroad.
+
 👉 https://alexeeff.gumroad.com/l/nhkcmc
 
 ---
