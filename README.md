@@ -82,7 +82,7 @@ Displays an existing hierarchy.
 The backend should generate HTML similar to (creates a flat list of elements inside "graph graph--profile" element):
 
 ```php
-<div class="graph graph--profile">
+<div class="graph graph--profile" data-root-sorting="number">
 	
     <div class="graph__vertex"
         data-parent=""
@@ -133,13 +133,13 @@ During the initial page load the library automatically creates all required cont
 
 graph__vertex
 
-|Attribute			| Required			| Description 													|
-|-------------------|-------------------|---------------------------------------------------------------|
-|data-id			| ✅				| Unique vertex identifier. 									|
-|data-parent		| ✅				| Parent identifier. Root vertices use an empty string (""). 	|
-|data-sorting		| optional			| Sorting method (number or alphabet). 							|
-|data-number		| CreateGraph only	| Display order. 												|
-|data-node-type		| Profile only		| Vertex state. 												|
+|Attribute			| Required						| Description 													|
+|-------------------|-------------------------------|---------------------------------------------------------------|
+|data-id			| ✅							| Unique vertex identifier. 									|
+|data-parent		| ✅							| Parent identifier. Root vertices use an empty string (""). 	|
+|data-sorting		| optional						| Sorting method (number or alphabet). 							|
+|data-number		| CreateGraph only, optional	| Display order. 												|
+|data-node-type		| Profile only, optional		| Vertex state. 												|
 
 ---
 
@@ -147,9 +147,10 @@ graph__vertex
 
 The following values are supported for data-node-type.
 
-Value		Description
-leaf		Final node. Cannot contain children.
-error		The referenced entity does not exist in the database.
+|Value 		| Description											|
+|-----------|-------------------------------------------------------|
+|leaf		| Final node. Cannot contain children.					|
+|error		| The referenced entity does not exist in the database.	|
 
 Examples of leaf:
 
@@ -291,11 +292,9 @@ The library allows you to customize both the appearance of the graph and the tem
 
 If no custom elements are provided, the library generates the vertex content and sorting indicator from the corresponding `data-*` attributes.
 
-If both a `data-*` attribute and a custom element are present, **the custom element takes precedence**. If there is a custom element, the data attribute associated with it is not needed.
-
 ### Root sorting element
 
-Add a custom root sorting element with the class `graph__sorting` directly inside the graph root.
+Add a custom root sorting element with the class `graph__sorting` directly inside the graph root. `data-root-sorting` is not needed in this case.
 
 ```html
 <div class="graph graph--profile">
@@ -338,6 +337,7 @@ Add a custom `graph__content` element inside every vertex.
 >
 > - be inside `.graph__content`
 > - have the class `.graph__sorting`
+> - `data-sorting` is not needed in this case
 
 ---
 
