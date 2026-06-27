@@ -1,0 +1,202 @@
+.graph {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.graph__content {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+    
+	border-radius: 3px;
+	
+	padding: 3px;
+    margin: 10px;
+}
+.graph__edges {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    
+    background-color: transparent;
+    
+    z-index: 10;
+}
+.graph__expansion-button {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	color: black;
+	padding: 6px 8px;
+	cursor: pointer;
+	
+	background: #ffffff;
+	border: 1px solid #e6e2db;
+	border-radius: 6px;
+	
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.graph__expansion-button:hover {
+	box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.7);
+}
+
+.graph__expansion-button:disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.graph__expansion-button::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	border-right: 1px solid currentColor;
+	border-bottom: 1px solid currentColor;
+	
+	transform: translate(-50%, -50%) rotate(-45deg);
+	
+	transition: transform 0.2s ease;
+}
+.graph__sorting-name {
+    min-width: 0;
+	overflow: hidden;
+    white-space: nowrap;
+}
+.graph__sorting {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.graph__subtree {
+	flex-basis: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	
+	transition: height 0.3s ease;
+	margin-left: 16px;
+}
+.graph__vertex {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	
+	flex-wrap: wrap;
+	
+	align-items: center;
+	
+	background-color: transparent;
+	overflow: hidden;
+	
+	min-height: 0;
+	
+	padding-left: 10px;
+	
+	font-size: 16px;
+	
+	transition: opacity 0.5s ease;
+	
+	--loop-error: '';
+	--sibling-error: '';
+	--no-item-error: '';
+	--leaf-warning: '';
+}
+
+.graph__vertex--loop-error::after		,
+.graph__vertex--sibling-error::after	,
+.graph__vertex--no-item-error::after	,
+.graph__vertex--leaf-warning::after
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	
+	padding: 7px 12px;
+	
+	content: var(--loop-error) var(--sibling-error) var(--no-item-error) var(--leaf-warning);
+}
+
+.graph__vertex > .graph__content {
+	opacity: 0.3;
+}
+
+
+
+.graph__vertex--has-subtree.graph__vertex--has-leaf 	> .graph__content	,
+.graph__vertex--has-subtree.graph__vertex--leaf 		> .graph__content
+{
+	opacity: 1;
+}
+.graph--profile {
+	
+}
+.graph__expansion-button--expanded {
+	
+}
+
+.graph__expansion-button--expanded::after {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.graph__expansion-button--hidden {
+	display: none;
+}
+.graph__sorting--hidden {
+	display: none;
+}
+.graph__sorting--root {
+	
+}
+.graph__subtree--collapsed {
+	height: 0;
+}
+.graph__vertex--has-leaf {
+	
+}
+
+.graph__vertex--has-leaf > .graph__content {
+	opacity: 1;
+}
+.graph__vertex--has-subtree {
+	
+}
+
+.graph__vertex--has-subtree > .graph__content {
+	opacity: 0.6;
+}
+.graph__vertex--leaf-warning {
+	--leaf-warning: 'Not a directory ';
+}
+
+.graph__vertex--leaf-warning > .graph__content {
+	box-shadow: 0 0 20px #ffea00;
+}
+.graph__vertex--leaf {
+	
+}
+
+.graph__vertex--leaf > .graph__content {
+    opacity: 1;
+}
+.graph__vertex--loop-error {
+	--loop-error: 'Loop error ';
+}
+
+.graph__vertex--loop-error > .graph__content {
+	background-color: red;
+}
+.graph__vertex--no-item-error {
+	--no-item-error: 'No such identifier ';
+}
+
+.graph__vertex--no-item-error > .graph__content {
+	background-color: red;
+}
