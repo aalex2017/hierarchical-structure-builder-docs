@@ -16,8 +16,9 @@ It is suitable for product catalogs, organizational charts, document trees, cate
 ---
 
 ## Purchase
-
-The complete package, including source files, examples, and documentation, is available on Gumroad.
+ 
+Need to create hierarchies?
+The full version including CreateGraph is available on Gumroad. It includes source files, examples, and documentation.
 
 👉 https://alexeeff.gumroad.com/l/nhkcmc
 
