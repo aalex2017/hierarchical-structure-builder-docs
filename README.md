@@ -16,11 +16,7 @@ The full version is available on Gumroad.
 ---
 ## Preview
 
-![](images/main.png)
-![](images/1.png)
-![](images/2.png)
-![](images/3.png)
-![](images/4.png)
+![](images/demo.gif)
 
 ---
 
