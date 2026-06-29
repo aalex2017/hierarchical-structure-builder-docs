@@ -16,6 +16,8 @@ The full version is available on Gumroad.
 ---
 ## Preview
 
+The demo below includes features from both the open-source Graph component and the optional CreateGraph editor.
+
 ![](images/demo.gif)
 
 ---
