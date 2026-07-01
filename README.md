@@ -557,3 +557,5 @@ Typical usage:
 - update additional UI
 
 Working examples are included in the examples directory.
+
+---
